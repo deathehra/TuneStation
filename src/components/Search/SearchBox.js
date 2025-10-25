@@ -10,17 +10,17 @@ function SearchBox(props) {
     useEffect(() => {        
         props.setProgress(0)
         props.setProgress(100)
-        document.title = "Search - TuneStation"
+        document.title = "Search - DeathMusic"
     }, []) 
     
     return (
         <section className="md:mt-10 text-black dark:text-gray-400 bg-light-100 dark:bg-deep-900 body-font">
             <div className="container px-5 py-5 mx-auto">
                 <div className="text-center mb-10">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font text-black dark:text-white mb-4">Search for anything!
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font text-black dark:text-white mb-4">Search what you want to do listen!
                     </h1>
-                    <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-black dark:text-gray-400 text-opacity-80">Search for
-                        your favourite song or try searching a generic query, like 'Top Punjabi Songs'.</p>
+                    <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-black dark:text-gray-400 text-opacity-80">Find Your
+                       Vibe or Explore Trending hits.</p>
                 </div>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
