@@ -38,7 +38,7 @@ function Terms(props) {
                 <br/>
                 <hr />
                 <br />
-                <p>By using TuneStation, you <b>agree</b> to comply with these Terms of Use. We reserve the right to modify or update these Terms of Use at any time without notice. If you continue to use DeathMusic after any changes to the Terms of Use have been made, you agree to be bound by the revised Terms of Use.</p>
+                <p>By using Deathmusic, you <b>agree</b> to comply with these Terms of Use. We reserve the right to modify or update these Terms of Use at any time without notice. If you continue to use DeathMusic after any changes to the Terms of Use have been made, you agree to be bound by the revised Terms of Use.</p>
             </div>
         </div>
     )
