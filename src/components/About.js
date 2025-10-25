@@ -30,7 +30,7 @@ function About(props) {
                             <div className="border hover:bg-light-200 dark:hover:bg-gray-900 md:h-40 h-auto border-gray-700 border-opacity-75 p-6 rounded-lg">
 
                                 <h2 className="text-lg text-gray-900 dark:text-white font-medium title-font mb-2">Completely Free</h2>
-                                <p className="leading-relaxed text-base">You don't have to pay a dime to access Tunestation. it's completely free!</p>
+                                <p className="leading-relaxed text-base">You don't have to pay a dime to access DeathMusic. it's completely free!</p>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
