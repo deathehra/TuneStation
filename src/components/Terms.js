@@ -4,38 +4,41 @@ function Terms(props) {
 
     useEffect(() => {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
-        document.title = "Terms of Use - TuneStation"
+        document.title = "Terms of Use - DeathMusic"
     }, [])
 
     return (
         <div className={props.theme}>
             <div className="container px-5 pt-28 pb-10 mx-auto text-gray-700 dark:text-gray-400 body-font bg-light-100 dark:bg-deep-900 ">
                 <div className="flex flex-col text-center w-full mb-10">
-                    <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-black dark:text-white'>Terms of Use for TuneStation</h1>
-                    <p className='text-lg sm:text-xl text-gray-900 dark:text-gray-100'>Welcome to TuneStation, an online music streaming and downloading platform built for the sole purpose of personal use and learning. By accessing or using TuneStation, you agree to be bound by these Terms of Use. If you do not agree to these Terms of Use, please <b>do not</b> use TuneStation.</p>
+                    <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-black dark:text-white'>Terms of Use for DeathMusic</h1>
+                    <p className='text-lg sm:text-xl text-gray-900 dark:text-gray-100'>Welcome to DeathMusic, an online music streaming and downloading platform built for the sole purpose of personal use and learning. By accessing or using DeathMusic, you agree to be bound by these Terms of Use. If you do not agree to these Terms of Use, please <b>do not</b> use DeathMusic.</p>
                 </div>
                 <hr />
                 <br />
                 <ul className='text-gray'>
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Personal Project:</span> TuneStation is a personal project created for the purpose of learning ReactJS. It is not intended to be monetized or used for any commercial purpose.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Personal Use Only:</span> TuneStation is provided for personal use only. You may use TuneStation to stream or download music for your own personal, non-commercial use.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Use of Unofficial JioSaavn API:</span> TuneStation uses <a href="https://github.com/sumitkolhe/jiosaavn-api" target="_blank" rel="noopener noreferrer" className='underline hover:text-black dark:hover:text-white'>Sumit Kolhe's Unofficial JioSaavn API</a>, which is available under the <b>MIT license</b>, which unofficially fetches the data directly from JioSaavn's website.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Prohibition on Sharing Material:</span> You agree not to share any music or other material you download from TuneStation with anyone else. Sharing copyrighted material without permission is illegal and can result in civil and criminal liability.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Ownership of data:</span> All the songs/albums/playlists displayed on this website belong to JioSaavn. We <b>do not intend</b> to infringe on any copyright, trademark, or other intellectual property rights of any third party. All rights to the music and other material available on TuneStation belong to <b>JioSaavn</b> and the respective song labels.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; No Piracy:</span> You agree not to use TuneStation to pirate music or engage in any other illegal activity.</li>
-                    <br />
-                    <li> <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; For JioSaavn and Copyright Owners:</span> In the event that JioSaavn or the copyright owners of the music available on TuneStation want the website to be taken down for any copyright infringement related case, they may raise an issue at the <a href="https://github.com/codyandersan/TuneStation" target="_blank" rel="noopener noreferrer" className='underline hover:text-black dark:hover:text-white'>TuneStation Git repository</a>. We will try our best to stop the functioning of this website as soon as possible.</li>
-                </ul>
+  <li>
+    <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Personal Project:</span> DeathMusic is a ReactJS learning project, created for fun and non-commercial purposes.
+  </li>
+  <br />
+  <li>
+    <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Music & Usage:</span> Use DeathMusic to stream or download music for personal, non-commercial use only. Do not share downloaded music or engage in any illegal activity.
+  </li>
+  <br />
+  <li>
+    <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Third-Party API:</span> DeathMusic uses an unofficial API to fetch music data. All rights to the music remain with the original owners.
+  </li>
+  <br />
+  <li>
+    <span className='font-bold text-gray-800 dark:text-gray-100'>&#8620; Copyright Notice:</span> All music, albums, and playlists available through DeathMusic belong to their respective copyright holders. DeathMusic does not claim ownership of any content. If a copyright owner requests removal of their content, we will promptly comply and take necessary action to ensure no infringement occurs. This project respects intellectual property rights and exists solely for educational and personal use.
+  </li>
+</ul>
+
 
                 <br/>
                 <hr />
                 <br />
-                <p>By using TuneStation, you <b>agree</b> to comply with these Terms of Use. We reserve the right to modify or update these Terms of Use at any time without notice. If you continue to use TuneStation after any changes to the Terms of Use have been made, you agree to be bound by the revised Terms of Use.</p>
+                <p>By using TuneStation, you <b>agree</b> to comply with these Terms of Use. We reserve the right to modify or update these Terms of Use at any time without notice. If you continue to use DeathMusic after any changes to the Terms of Use have been made, you agree to be bound by the revised Terms of Use.</p>
             </div>
         </div>
     )
