@@ -15,7 +15,6 @@ function Showcase(props) {
     const [trending_albums, setTrendingAlbums] = useState([])
 
     const [top_albums, setTopAlbums] = useState([])
-    const [trending_podcasts, setTrendingPodcasts] = useState([])
     
     const [playlists, setPlaylists] = useState([])
     const [charts, setCharts] = useState([])
@@ -45,9 +44,6 @@ function Showcase(props) {
 
         //Trending albums:
         setTrendingAlbums(getShowcase(resp["data"]["trending"]["albums"], "album"))
-
-        // Trending Podcasts
-        setTrendingPodcasts(getShowcase(resp["data"]["trending"]["shows"], "show",))
 
         //Top albums:
         setTopAlbums(getShowcase(resp["data"]["albums"], "album"))
@@ -132,9 +128,6 @@ function Showcase(props) {
 
                     <Heading title="Editorial Picks" />
                     <Albums albums={top_albums} setAlbumId={props.setAlbumId} />
-
-                    <Heading title="Trending Podcasts" />
-                    <Playlists playlists={trending_podcasts} setPlaylistId={props.setPlaylistId} />
      
                     <Heading title="Top Charts" />
                     <Playlists playlists={charts} setPlaylistId={props.setPlaylistId} />
