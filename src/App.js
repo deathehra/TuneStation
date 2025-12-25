@@ -49,7 +49,7 @@ function App() {
   }
 
   useEffect(() => {
-    showAlert("By using TuneStation, you agree to be bound by the Terms of Use.")
+    showAlert("Welcome to DeathMusic — Terms of Use apply.")
   }, [])
 
   return (
