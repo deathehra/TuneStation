@@ -15,7 +15,8 @@ function Showcase(props) {
     const [trending_albums, setTrendingAlbums] = useState([])
 
     const [top_albums, setTopAlbums] = useState([])
-
+    const [trending_podcasts, setTrendingPodcasts] = useState([])
+    
     const [playlists, setPlaylists] = useState([])
     const [charts, setCharts] = useState([])
 
@@ -44,6 +45,9 @@ function Showcase(props) {
 
         //Trending albums:
         setTrendingAlbums(getShowcase(resp["data"]["trending"]["albums"], "album"))
+
+        // Trending Podcasts
+        setTrendingPodcasts(getShowcase(resp["data"]["trending"]["shows"], "show",))
 
         //Top albums:
         setTopAlbums(getShowcase(resp["data"]["albums"], "album"))
@@ -86,30 +90,29 @@ function Showcase(props) {
      * @param {String} type The type of data (song/album/playlist), so as to avoid different type being displayed with another type of data
      * @returns the name, image, id of the data
      */
-    const getShowcase = (data, type) => {
-        let data_showcase = []
-        let count = 0
-        while (count < 10) {
-            if (data_showcase.length === 4) break
-            // if song index exists:    
-            if (data[count] && data[count].type == type) {
-                let data_name = data[count]["name"] ? data[count]["name"] : data[count]["title"]
-                data_showcase.push({
-                    name: data_name,
-                    image: data[count]["image"][2]["link"],
-                    id: data[count]["id"]
-                })
-            }
-            count += 1
-        }
-        return shuffle(data_showcase)
+   const getShowcase = (data, type, limit = 12) => {
+    if (!Array.isArray(data)) return []
 
+    const data_showcase = []
+
+    for (let i = 0; i < data.length && data_showcase.length < limit; i++) {
+        if (data[i]?.type === type) {
+            data_showcase.push({
+                name: data[i].name || data[i].title,
+                image: data[i].image?.[2]?.link,
+                id: data[i].id
+            })
+        }
     }
+
+    return shuffle(data_showcase)
+}
+
 
 
     useEffect(() => {
         document.body.scrollTop = document.documentElement.scrollTop = 0; //scroll to top of page
-        document.title = "Popular Now - TuneStation"
+        document.title = "Popular Now - DeathMusic"
         setHomepageData()
     }, [])
 
@@ -130,6 +133,9 @@ function Showcase(props) {
                     <Heading title="Editorial Picks" />
                     <Albums albums={top_albums} setAlbumId={props.setAlbumId} />
 
+                    <Heading title="Trending Podcasts" />
+                    <Playlists playlists={trending_podcasts} setPlaylistId={props.setPlaylistId} />
+     
                     <Heading title="Top Charts" />
                     <Playlists playlists={charts} setPlaylistId={props.setPlaylistId} />
 
